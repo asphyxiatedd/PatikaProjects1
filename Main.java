@@ -1,20 +1,22 @@
+import java.math.MathContext;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        // Yarıçapı r, merkez açısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
-        //𝜋 sayısını = 3.14 alınız.
-        //Formül : (𝜋 * (r*r) * 𝛼) / 360
-
-        int r, a;
-        double pi = 3.14;
+        // Kilo (kg) / Boy(m) * Boy(m)
+        //Çıktısı
+        //Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
+        //Lütfen kilonuzu giriniz : 105
+        //Vücut Kitle İndeksiniz : 35.49215792320173
+        double kg ;
+        double m;
         Scanner input = new Scanner(System.in);
-        System.out.print("Dairenin Yari Capini Giriniz: ");
-        r = input.nextInt();
-        System.out.print("Merkez aciyi Giriniz: ");
-        a= input.nextInt();
-        double formul =pi * (r*r)* a / 360 ;
-        System.out.println("Daire Diliminin Alani : " + formul);
+        System.out.print("Lütfen boyunuzu (metre cinsinde) giriniz: ");
+         m = input.nextDouble();
+        System.out.print("Lütfen kilonuzu giriniz: ");
+         kg= input.nextInt();
+         double endeks = kg / (m*m);
+        System.out.println("Vucut Kitle Endeksiniz : " + endeks);
 
 
 
