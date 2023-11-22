@@ -2,20 +2,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int mat, fizik, kimya, geo, art, tarih, ortlama;
+        Scanner input = new Scanner(System.in);
 
-        String username, password;
+        System.out.print("Matematik Notunuzu Giriniz: ");
+        mat = input.nextInt();
 
-        Scanner inp = new Scanner(System.in);
-        System.out.print("Kullanıcı Adınız: ");
-        username = inp.nextLine();
-        System.out.print("Sifreniz: ");
-        password = inp.nextLine();
+        System.out.print("Fizik Notunuzu Giriniz: ");
+        fizik = input.nextInt();
 
-        if (username.equals("patika") && password.equals("java123")) {
-            System.out.println("Giriş Başarılı");
-        } else {
-            System.out.println("Hatalı kullanıcı adı veya şifre girdiniz!");
+        System.out.print("Kimya otunuzu Giriniz: ");
+        kimya = input.nextInt();
 
+        System.out.print("Geo Notunuzu Giriniz: ");
+        geo = input.nextInt();
+
+        System.out.print("Art Notunuzu Giriniz: ");
+        art = input.nextInt();
+
+        System.out.print("Tarih Notunuzu Giriniz: ");
+        tarih = input.nextInt();
+        ortlama = (mat + fizik + geo + tarih + art + kimya) / 6;
+        if (ortlama >= 55) {
+            System.out.println("Sınıfı Geçtiniz Ortalamanız: " + ortlama);
+        } else if (ortlama < 55) {
+            System.out.println("Sınıfta Kaldınız Ortalamanız:" + ortlama);
 
         }
 
