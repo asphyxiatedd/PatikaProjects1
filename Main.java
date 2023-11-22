@@ -2,34 +2,34 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int mat, fizik, kimya, geo, art, tarih, ortlama;
+
+        int heat;
         Scanner input = new Scanner(System.in);
-
-        System.out.print("Matematik Notunuzu Giriniz: ");
-        mat = input.nextInt();
-
-        System.out.print("Fizik Notunuzu Giriniz: ");
-        fizik = input.nextInt();
-
-        System.out.print("Kimya otunuzu Giriniz: ");
-        kimya = input.nextInt();
-
-        System.out.print("Geo Notunuzu Giriniz: ");
-        geo = input.nextInt();
-
-        System.out.print("Art Notunuzu Giriniz: ");
-        art = input.nextInt();
-
-        System.out.print("Tarih Notunuzu Giriniz: ");
-        tarih = input.nextInt();
-        ortlama = (mat + fizik + geo + tarih + art + kimya) / 6;
-        if (ortlama >= 55) {
-            System.out.println("Sınıfı Geçtiniz Ortalamanız: " + ortlama);
-        } else if (ortlama < 55) {
-            System.out.println("Sınıfta Kaldınız Ortalamanız:" + ortlama);
+        System.out.println("Hava kaç derece?");
+        heat = input.nextInt();
+        if (heat < 5) {
+            System.out.println("Kayak Yapabilirsiniz");
+        } else if (heat >= 5 && heat < 15) {
+            System.out.println("Sinemaya Gidebilirsiniz");
+        } else if (heat >= 15 && heat <= 25) {
+            System.out.println("Piknik yapabilirsiniz");
+        } else if (heat > 25) {
+            System.out.println("Yüzemeye Gidebilirsiniz");
 
         }
-
-
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
